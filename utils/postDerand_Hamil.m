@@ -15,7 +15,7 @@ Validity = zeros(Sample, length(list));
 for i = 1:Sample
     for j = list
         % for the j-th observable
-        vec = pauli_vec(j,1:end-1)
+        vec = pauli_vec(j,1:end-1);
         if IfHits(vec, basis_list(i,:)) > 0.5
             % if sample hits observable, it provides actionable info
             Validity(i,j) = 1;
