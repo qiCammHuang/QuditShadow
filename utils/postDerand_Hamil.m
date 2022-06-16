@@ -12,7 +12,7 @@ global pauli_vec
 Estimate = zeros(Sample, length(list));
 Validity = zeros(Sample, length(list));
 
-parfor i = 1:Sample
+for i = 1:Sample
     for j = list
         % for the j-th observable
         vec = pauli_vec(j,1:end-1)
